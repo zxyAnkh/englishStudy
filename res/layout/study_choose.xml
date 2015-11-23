@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btn_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_cet4"
+        android:layout_marginRight="49dp"
+        android:layout_marginTop="102dp"
+        android:text="Recommend" />
+
+    <Button
+        android:id="@+id/btn_cet6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_recommend"
+        android:layout_alignRight="@+id/btn_recommend"
+        android:layout_marginRight="25dp"
+        android:text="CET6" />
+
+    <Button
+        android:id="@+id/btn_pubmeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_recommend"
+        android:layout_alignBottom="@+id/btn_recommend"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="42dp"
+        android:text="PubMeb" />
+
+    <Button
+        android:id="@+id/btn_cet4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btn_pubmeb"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="123dp"
+        android:text="CET4" />
+
+</RelativeLayout>

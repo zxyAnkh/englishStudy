@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/imgbtn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/text_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="----------例句----------"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/text_means"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_example"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/text_mean"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/edt_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgbtn_back"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/imgbtn_search"
+        android:layout_toRightOf="@+id/imgbtn_back"
+        android:ems="10" 
+        android:hint="请输入单词">
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/imgbtn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/search"
+        android:src="@drawable/search" />
+
+    <TextView
+        android:id="@+id/text_mean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imgbtn_back"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="----------单词释义----------"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imgbtn_back"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="13dp"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <ImageView
+            android:id="@+id/imgview_uk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/speaker" />
+
+        <TextView
+            android:id="@+id/text_uk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="                          " />
+
+        <ImageView
+            android:id="@+id/imgview_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/speaker" />
+
+        <TextView
+            android:id="@+id/text_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="                         " />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_examples"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/text_example" >
+
+    </ListView>
+
+</RelativeLayout>
