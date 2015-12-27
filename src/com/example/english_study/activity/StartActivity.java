@@ -25,6 +25,6 @@ public class StartActivity extends ActionBarActivity{
             finish();
              } 
          };
-        timer.schedule(task, 800); //5秒后
+        timer.schedule(task, 1000); //1秒后
 	}
 }

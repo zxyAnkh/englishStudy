@@ -59,8 +59,10 @@ public class NewWordActivity extends ActionBarActivity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				word = edt_new.getText().toString();
-				if(word.trim()!="")
+				if(!word.trim().equals(""))
 					nm.addToNew(word);
+				else
+					Toast.makeText(NewWordActivity.this,"输入为空",Toast.LENGTH_SHORT).show();
 				updateNewWordList();
 			}
 		});

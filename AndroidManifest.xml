@@ -24,30 +24,33 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="19" />
 
-    
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <service
-        android:name="com.baidu.location.f"
-        android:enabled="true"
-        android:process=":remote" >
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
         </service>
+
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="gu0R2AEBaF94O7glDFrKmW4q" />
 
         <activity
-            android:name=".activity.WelcomeActivity"
+            android:name=".activity.StartActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".activity.MainActivity"
@@ -56,11 +59,6 @@
         <activity
             android:name=".activity.StudyChooseActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activity.DictionaryActivity"

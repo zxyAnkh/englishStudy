@@ -78,18 +78,23 @@ public class DictionaryActivity extends ActionBarActivity {
 				// TODO Auto-generated method stub
 				// else
 				word = edt_word.getText().toString();
-				dicWord = dm.search(word);
-				try {
-					/*
-					 * 通过线程进行网络访问获取
-					 */
-					task = new DicAsyncTask();
-					Object params[] = { word, DictionaryManager.mAppContext };
-					task.execute(params);
-					showResult(dicWord);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				if (word.trim().equals(""))
+					Toast.makeText(DictionaryActivity.this, "请输入内容",
+							Toast.LENGTH_SHORT);
+				else {
+					dicWord = dm.search(word);
+					try {
+						/*
+						 * 通过线程进行网络访问获取
+						 */
+						task = new DicAsyncTask();
+						Object params[] = { word, DictionaryManager.mAppContext };
+						task.execute(params);
+						showResult(dicWord);
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 			}
 
